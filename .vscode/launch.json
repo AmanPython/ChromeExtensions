@@ -5,10 +5,21 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome",
-            "url": "https://example.com/#this-could-be-anything",
+            "url": "https://developer.chrome.com/docs/extensions/reference/api/scripting",
             "webRoot": "${workspaceFolder}",
             "runtimeArgs": [
                 "--load-extension=${workspaceFolder}/reading-time/"
+            ],
+            "sourceMaps": true
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Focus Mode",
+            "url": "https://developer.chrome.com/docs/extensions/reference/api/scripting",
+            "webRoot": "${workspaceFolder}",
+            "runtimeArgs": [
+                "--load-extension=${workspaceFolder}/focus-mode/"
             ],
             "sourceMaps": true
         },
