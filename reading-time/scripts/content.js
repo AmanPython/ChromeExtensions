@@ -1,21 +1,61 @@
-// Copyright 2022 Google LLC
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     https://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
+// JavaScript code
+
+// Flag to ensure the code runs only once
+let isJobSearchInitialized = false;
+
+if (!isJobSearchInitialized) {
+    const jobTitleInput = document.getElementById("text-input-what");
+    const cityInput = document.getElementById("text-input-where");
+    const findJobsButton = document.querySelector(".yosegi-InlineWhatWhere-primaryButton");
+    debugger
+
+    // Fill in the job title and city
+    if (jobTitleInput && cityInput && findJobsButton) {
+        jobTitleInput.value = "python software developer";
+        cityInput.value = "Bengaluru, Karnataka";
+
+        // Check if both fields are filled
+        if (jobTitleInput.value && cityInput.value) {
+            findJobsButton.click();
+            isJobSearchInitialized = true; // Update the flag
+        }
+    }
+}
+
+// Function to click on each job element and wait for 5 seconds
+function clickJobElements() {
+  // Select all job elements
+  debugger
+  const jobElements = document.querySelectorAll('.job_seen_beacon .jcs-JobTitle');
+
+  // Define a function to click on a job element and wait for 5 seconds
+  function clickAndWait(index) {
+    if (index < jobElements.length) {
+      jobElements[index+5].click();
+      console.log(`Clicked on job element ${index + 1}`);
+      // Wait for 5 seconds before clicking the next element
+      debugger
+      // setTimeout(() => {
+      //   clickAndWait(index + 1);
+      // }, 5000);
+    } else {
+      console.log('Finished clicking all job elements.');
+    }
+  }
+
+  // Start the process by clicking the first job element
+  clickAndWait(0);
+}
+
+// Execute the function to start the process
+clickJobElements();
+
 
 const article = document.querySelector('article');
 
 // `document.querySelector` may return null if the selector doesn't match anything.
 if (article) {
+  debugger
   const text = article.textContent;
   /**
    * Regular expression to find all "words" in a string.

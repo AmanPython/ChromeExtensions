@@ -4,8 +4,8 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Launch Chrome",
-            "url": "https://developer.chrome.com/docs/extensions/reference/api/scripting",
+            "name": "Reading Time",
+            "url": "https://in.indeed.com/",
             "webRoot": "${workspaceFolder}",
             "runtimeArgs": [
                 "--load-extension=${workspaceFolder}/reading-time/"
