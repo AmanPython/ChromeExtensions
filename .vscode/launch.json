@@ -15,6 +15,17 @@
         {
             "type": "chrome",
             "request": "launch",
+            "name": "Google Search Helper",
+            "url": "https://www.google.co.in/",
+            "webRoot": "${workspaceFolder}",
+            "runtimeArgs": [
+                "--load-extension=${workspaceFolder}/google-search-helper/"
+            ],
+            "sourceMaps": true
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
             "name": "Focus Mode",
             "url": "https://developer.chrome.com/docs/extensions/reference/api/scripting",
             "webRoot": "${workspaceFolder}",
