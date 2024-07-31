@@ -4,11 +4,22 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Launch Chrome",
-            "url": "https://developer.chrome.com/docs/extensions/reference/api/scripting",
+            "name": "Reading Time",
+            "url": "https://in.indeed.com/",
             "webRoot": "${workspaceFolder}",
             "runtimeArgs": [
                 "--load-extension=${workspaceFolder}/reading-time/"
+            ],
+            "sourceMaps": true
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Google Search Helper",
+            "url": "https://www.google.co.in/",
+            "webRoot": "${workspaceFolder}",
+            "runtimeArgs": [
+                "--load-extension=${workspaceFolder}/google-search-helper/"
             ],
             "sourceMaps": true
         },

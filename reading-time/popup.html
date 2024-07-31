@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Google Search Helper</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+    }
+    input, button {
+      display: block;
+      margin: 10px 0;
+    }
+    .result {
+      margin: 10px 0;
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+    }
+    .result a {
+      text-decoration: none;
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <button id="open-google">Open Google</button>
+  <input type="text" id="search-word" placeholder="Enter search word">
+  <button id="search-google">Search Google</button>
+  <div id="results"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
