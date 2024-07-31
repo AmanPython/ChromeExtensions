@@ -1,4 +1,5 @@
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    debugger
     if (request.action === "performSearch") {
       document.querySelector('textarea[name="q"]').value = request.query;
       document.querySelector('input[name="btnK"]').click();
