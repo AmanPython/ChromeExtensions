@@ -24,6 +24,17 @@
             "sourceMaps": true
         },
         {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Tabs Manager",
+            "url": "https://developer.chrome.com/docs/extensions/reference/api/scripting",
+            "webRoot": "${workspaceFolder}",
+            "runtimeArgs": [
+                "--load-extension=${workspaceFolder}/tabs-manager/"
+            ],
+            "sourceMaps": true
+        },
+        {
             "type": "firefox",
             "request": "launch",
             "name": "Launch Firefox",
